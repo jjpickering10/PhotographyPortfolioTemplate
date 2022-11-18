@@ -1,0 +1,31 @@
+%title-62 {
+    font-size: 14.2rem;
+    text-transform: uppercase;
+
+    font-family: $playfair-display, serif;
+    font-weight: 900;
+    @include media("<=phone") {
+        font-size: 9.4rem;
+    }
+}
+
+%title-132 {
+    font-size: 13.2rem;
+    text-transform: uppercase;
+
+    font-family: $playfair-display, serif;
+    font-weight: 900;
+    @include media("<=phone") {
+    }
+}
+
+%title-322 {
+    font-size: 19.2rem;
+    text-transform: uppercase;
+
+    font-family: $playfair-display, serif;
+    font-weight: 900;
+    opacity: 0.1;
+    @include media("<=phone") {
+    }
+}

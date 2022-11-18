@@ -1,0 +1,13 @@
+.loader {
+    @extend %cover;
+    width: 100vw;
+    height: 100vh;
+    @extend %center;
+    background: $color-brown;
+    z-index: 9999999999999999;
+}
+
+.loader__number {
+    color: $color-white;
+    @extend %title-62;
+}

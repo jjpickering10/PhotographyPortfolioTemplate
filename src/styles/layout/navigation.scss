@@ -1,0 +1,104 @@
+.navigation {
+    @extend %cover;
+
+    font-family: $playfair-display, serif;
+    text-transform: lowercase;
+
+    color: $color-white;
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+    z-index: z("navigation");
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 192rem;
+
+        height: 100%;
+        left: auto;
+        right: 0;
+        background: linear-gradient(45deg, rgb(255 255 255 / 30%), #0000005e);
+    }
+}
+
+.navigation__link {
+    @extend %description-25;
+    text-transform: uppercase;
+    width: fit-content;
+    position: relative;
+    left: 3.5rem;
+    top: 3.5rem;
+    pointer-events: auto;
+    color: $color-yellow;
+    display: block;
+    transition: 0.4s transform ease-out, 0.4s color;
+
+    &:hover {
+        color: $color-white;
+        transform: scale(1.1);
+        transition: 0.4s transform ease-out, 0.4s color;
+    }
+
+    @include media("<phone") {
+    }
+}
+
+.navigation__list {
+    display: flex;
+    position: absolute;
+    right: 3.5rem;
+    top: 3.5rem;
+    gap: 3.5rem;
+}
+
+.navigation__list__item {
+    @extend %description-25;
+}
+
+.navigation__list__link {
+    pointer-events: auto;
+    position: relative;
+
+    &:hover {
+        opacity: 0.4;
+        transition: opacity 0.4s;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: auto;
+        bottom: -0.5rem;
+        left: 0;
+        width: 100%;
+        transform-origin: left;
+        transform: scaleX(0) translateY(1rem);
+        height: 0.1rem;
+        background: $color-white;
+    }
+
+    &.active {
+        &::after {
+            content: "";
+            position: absolute;
+            top: auto;
+            bottom: -0.5rem;
+            left: 0;
+            width: 100%;
+            transform: scaleX(1) translateY(0);
+            transform-origin: left;
+            transition: 0.4s transform ease-out;
+            height: 0.1rem;
+            background: $color-white;
+        }
+    }
+}
+
+.navigation__scroll {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 3.5rem;
+    @extend %description-25;
+    text-transform: lowercase;
+}

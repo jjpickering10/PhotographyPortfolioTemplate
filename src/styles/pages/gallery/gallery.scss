@@ -1,0 +1,200 @@
+.gallery__wrapper {
+    @extend %center;
+    @extend %cover;
+    flex-direction: column;
+    opacity: 0;
+    transition: 1s opacity ease;
+
+    &.active {
+        opacity: 1;
+        transition: 1s opacity ease;
+    }
+}
+.gallery__section {
+    @extend %center;
+    flex-direction: column;
+    width: 192rem;
+    height: 94.4rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+    perspective: 100rem;
+    transform-style: preserve-3d;
+    justify-content: space-evenly;
+}
+.gallery__section__image__wrapper {
+    @extend %cover;
+    position: relative;
+    width: 128rem;
+    height: 72rem;
+    overflow: hidden;
+}
+.gallery__section__image__wrapper__image {
+    width: 100%;
+    position: absolute;
+
+    opacity: 0;
+}
+.gallery__section__info__wrapper {
+    overflow: hidden;
+}
+.gallery__section__info {
+    @extend %center;
+    @extend %description-55;
+    justify-content: flex-start;
+    font-size: 20rem;
+    gap: 2.5rem;
+    flex-direction: column;
+
+    height: 80rem;
+    width: 100vw;
+    transition: 0.8s opacity ease;
+    opacity: 1;
+
+    @include media("<=phone") {
+        font-size: 10rem;
+    }
+
+    &.hide {
+        opacity: 0;
+        transition: 0.8s opacity ease;
+    }
+}
+.gallery__section__info__category {
+    @extend %center;
+    @extend %description-55;
+    font-weight: 900;
+    justify-content: flex-start;
+    font-size: 15rem;
+    gap: 2.5rem;
+    flex-direction: column;
+    transition: 0.4s ease;
+    opacity: 0.25;
+
+    @include media("<=phone") {
+        font-size: 6rem;
+        opacity: 0.85;
+    }
+
+    &.hide {
+        transform: translateY(-25%);
+        opacity: 0;
+
+        transition: 0.4s transform ease-out, 0.4s opacity ease;
+    }
+}
+.gallery__section__category {
+    color: $color-yellow;
+    text-transform: uppercase;
+    position: relative;
+
+    font-family: $playfair-display, serif;
+    @extend %title-62;
+
+    opacity: 0.1;
+
+    transition: 0.4s ease;
+
+    &.hide {
+        opacity: 0;
+        transition: 0.4s opacity ease;
+    }
+}
+.gallery__section__description {
+    font-family: $playfair-display, serif;
+    font-weight: 900;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 0.01rem;
+        background: $color-white-fade-extra;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: -1rem;
+    }
+}
+.gallery__section__text {
+    position: relative;
+    color: $color-white-fade;
+    @extend %description-25;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 0.01rem;
+        background: $color-yellow;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: -1rem;
+    }
+}
+
+.gallery__back__wrapper {
+    @extend %center;
+    width: 27rem;
+    height: 100vh;
+    transition: 0.4s ease;
+    opacity: 1;
+
+    &.hide {
+        opacity: 0;
+        transition: 0.4s opacity ease;
+    }
+}
+
+.gallery__back__text {
+    @extend %description-25;
+    border-bottom: 1rem solid $color-white-fade-extra;
+    padding: 1rem 2rem;
+
+    font-family: $playfair-display, serif;
+    text-transform: lowercase;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus {
+        border-bottom: 0.1rem solid $color-white;
+        transition: 0.4s;
+    }
+}
+
+.beach {
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+    pointer-events: none;
+    transform: translate3d(5%, 25%, 0) scale(1) !important;
+}
+.cars {
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+    pointer-events: none;
+    transform: translate3d(10%, 55%, 0) scale(1) !important;
+}
+.nature {
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+    pointer-events: none;
+    transform: translate3d(65%, 25%, 0) scale(1) !important;
+}
+.animals {
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+    pointer-events: none;
+    transform: translate3d(65%, 55%, 0) scale(1) !important;
+}
+
+.gallery__canvas {
+    @extend %cover;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}

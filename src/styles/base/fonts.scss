@@ -1,0 +1,77 @@
+@font-face {
+    font-family: $academy_engraved;
+    src: url("../../fonts/academy-engraved-let-plain.woff2") format("woff2"),
+        url("../../fonts/academy-engraved-let-plain.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $raleway;
+    src: url("../../fonts/raleway-light.woff2") format("woff2"), url("../../fonts/raleway-light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("../../fonts/raleway-extra-light.woff2") format("woff2"),
+        url("../../fonts/raleway-extra-light.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("../../fonts/raleway-bold.woff2") format("woff2"), url("../../fonts/raleway-bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url("../../fonts/raleway-thin.woff2") format("woff2"), url("../../fonts/raleway-thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $playfair-display;
+    src: url("../../fonts/playfair-display-regular.woff2") format("woff2"),
+        url("../../fonts/playfair-display-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $playfair-display;
+    src: url("../../fonts/playfair-display-bold.woff2") format("woff2"),
+        url("../../fonts/playfair-display-bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $playfair-display;
+    src: url("../../fonts/playfair-display-black.woff2") format("woff2"),
+        url("../../fonts/playfair-display-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $playfair-display;
+    src: url("../../fonts/playfair-display-medium.woff2") format("woff2"),
+        url("../../fonts/playfair-display-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,119 @@
+.about {
+    @extend %cover;
+
+    position: fixed;
+}
+.about__wrapper {
+    @extend %center;
+    margin-top: 22.4rem;
+    align-items: flex-start;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.about__title {
+    width: 64rem;
+    height: 108rem;
+    @extend %center;
+    align-items: flex-start;
+
+    @include media("<=phone") {
+        width: 25.6rem;
+    }
+}
+.about__title__title {
+    @extend %title-132;
+    word-break: break-all;
+
+    font-size: 114.2rem;
+    width: 114.2rem;
+    opacity: 0.05;
+    @include media("<=phone") {
+        width: 45.7rem;
+        font-size: 45.7rem;
+    }
+}
+.about__sections {
+    width: 128rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "zero"
+        "one"
+        "two"
+        "three";
+
+    @include media("<=phone") {
+        width: 51.2rem;
+    }
+}
+.about__sections__section {
+    @extend %center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 170rem;
+    width: 128rem;
+
+    .about__images__image__wrapper {
+        margin-top: 2.5rem;
+        overflow: hidden;
+    }
+
+    &[data-index="0"] {
+        grid-area: zero;
+    }
+    &[data-index="1"] {
+        grid-area: one;
+    }
+    &[data-index="2"] {
+        grid-area: two;
+    }
+    &[data-index="3"] {
+        grid-area: three;
+    }
+
+    .about__images__image {
+        width: 100%;
+    }
+
+    @include media("<=phone") {
+        width: 51.2rem;
+        height: 200rem;
+    }
+}
+.about__sections__section__heading {
+    @extend %title-62;
+    color: $color-yellow;
+    text-transform: capitalize;
+    margin: 5rem 0;
+}
+.about__sections__section__text {
+    @extend %description-25;
+    color: $color-white;
+    width: 50%;
+    line-height: 1.25;
+    margin: 2.5rem 0;
+    opacity: 1;
+    font-weight: 100;
+
+    span {
+        display: inline-block;
+
+        &.space {
+            width: 1rem;
+        }
+    }
+
+    @include media("<=phone") {
+        width: 90%;
+    }
+}
+
+.about__background__image {
+    @extend %center;
+    height: 100%;
+    width: 100%;
+}

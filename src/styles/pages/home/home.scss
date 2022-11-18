@@ -1,0 +1,128 @@
+.home {
+    @extend %cover;
+    position: fixed;
+}
+.home__wrapper {
+    @extend %center;
+    margin-top: 22.4rem;
+
+    opacity: 1;
+
+    @include media("<=phone") {
+        flex-direction: column;
+        margin-top: 10.4rem;
+        height: 100%;
+        justify-content: space-evenly;
+    }
+}
+
+.home__titles {
+    width: 64rem;
+    height: 72rem;
+    padding-left: 3.5rem;
+    @extend %center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1000;
+
+    @include media("<=phone") {
+        height: auto;
+        width: auto;
+        padding: 2rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+.home__titles__title__wrapper,
+.home__titles__description__wrapper {
+    overflow: hidden;
+
+    @include media("<=phone") {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.home__titles__title {
+    @extend %title-62;
+    color: $color-white;
+    letter-spacing: 0.5rem;
+    line-height: 16rem;
+
+    span {
+        color: $color-yellow;
+        line-height: 11rem;
+        @include media("<=phone") {
+            line-height: 4rem;
+        }
+    }
+
+    @include media("<=phone") {
+        line-height: 6rem;
+        font-size: 6.4rem;
+    }
+}
+
+.home__titles_description {
+    @extend %description-25;
+    color: $color-white-fade;
+    margin-top: 6.5rem;
+
+    width: 43rem;
+    line-height: 1.25;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.1rem;
+        background: $color-white;
+        top: -2.5rem;
+        left: 0;
+    }
+}
+.home__images {
+    @extend %cover;
+    position: relative;
+    width: 128rem;
+    height: 72rem;
+
+    @include media("<=phone") {
+        width: 100vw;
+        height: calc(100vw / 1.7777777);
+        position: absolute;
+    }
+}
+
+.home__images__image__wrapper {
+    overflow: hidden;
+    @extend %cover;
+
+    height: 72rem;
+
+    @include media("<=phone") {
+        height: calc(100vw / 1.7777777);
+    }
+}
+.home__images__image {
+    width: 100%;
+    position: absolute;
+    opacity: 0.25;
+    filter: blur(0.75rem) grayscale(1);
+    &[data_index="1"] {
+        opacity: 0.5;
+        filter: blur(0.5rem);
+    }
+    &[data_index="2"] {
+        opacity: 0.75;
+        filter: blur(0.25rem) grayscale(1);
+    }
+    &[data_index="3"] {
+        opacity: 1;
+        filter: blur(0rem);
+    }
+}
